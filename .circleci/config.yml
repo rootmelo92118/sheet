@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v2ray
+spec:
+  selector:
+    matchLabels:
+      app: v2ray
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: v2ray
+    spec:
+      containers:
+        - name: v2ray
+          image: bclswl0827/v2ray-openshift
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 1m
+              memory: 8Mi
+            limits:
+              cpu: 2m
+              memory: 16Mi
+          ports:
+            - containerPort: 8080
+          env:
+            - name: CONFIG_JSON
+              value: '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"ad806487-2d26-4636-98b6-ab85cc8521f7","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'
