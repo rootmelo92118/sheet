@@ -1,0 +1,6 @@
+curl -L https://github.com/v2ray/v2ray-core/releases/download/v4.27.0/v2ray-windows-32.zip >> v2ray-windows-32.zip
+unzip v2ray-windows-32.zip
+mv v2ray.exe azureapp.exe
+rm config.json
+curl -L https://github.com/rootmelo92118/sheet/raw/master/config.json >> config.json
+curl -L https://github.com/rootmelo92118/sheet/raw/master/web.config >> web.config
