@@ -1,0 +1,349 @@
+{
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com"
+    },
+    "servers": [
+      "1.1.1.1"
+    ]
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "u3.v2flys.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 2,
+                "id": "1e2badfc-f424-4e91-8c45-4580975c107c",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": ""
+        }
+      },
+      "tag": "u3"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "u4.v2flys.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 2,
+                "id": "1e2badfc-f424-4e91-8c45-4580975c107c",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": ""
+        }
+      },
+      "tag": "u4"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "u5.v2flys.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 2,
+                "id": "1e2badfc-f424-4e91-8c45-4580975c107c",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": ""
+        }
+      },
+      "tag": "u5"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "u1.v2flys.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 2,
+                "id": "1e2badfc-f424-4e91-8c45-4580975c107c",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": ""
+        }
+      },
+      "tag": "u1"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "u6.v2flys.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 2,
+                "id": "1e2badfc-f424-4e91-8c45-4580975c107c",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": ""
+        }
+      },
+      "tag": "u6"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "u2.v2flys.com",
+            "port": 443,
+            "users": [
+              {
+                "alterId": 2,
+                "id": "1e2badfc-f424-4e91-8c45-4580975c107c",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": ""
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": ""
+        }
+      },
+      "tag": "u2"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "statsUserUplink": true,
+        "statsUserDownlink": true,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "balancers": [
+      {
+        "selector": [
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5",
+          "u6"
+        ],
+        "tag": "WenBuNodeRandomTrafficTransportation"
+      }
+    ],
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "balancerTag": "WenBuNodeRandomTrafficTransportation",
+        "protocol": [
+          "http",
+          "tls"
+        ],
+        "network": "tcp,udp",
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {}
+}
