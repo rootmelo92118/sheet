@@ -1,0 +1,41 @@
+---- Servers and domain names check
+
+Getting IP for NS1.HE.NET: 216.218.130.2
+Getting IP for NS1.HE.NET: 2001:470:100::2
+Getting IP for NS2.HE.NET: 216.218.131.2
+Getting IP for NS2.HE.NET: 2001:470:200::2
+Getting IP for NS3.HE.NET: 216.218.132.2
+Getting IP for NS3.HE.NET: 2001:470:300::2
+Getting IP for NS4.HE.NET: 216.66.1.2
+Getting IP for NS4.HE.NET: 2001:470:400::2
+Getting IP for NS5.HE.NET: 216.66.80.18
+Getting IP for NS5.HE.NET: 2001:470:500::2
+
+---- Checking SOA records for FULLACCESSTOINTERNET.CN.EU.ORG
+
+SOA from NS1.HE.NET at 216.218.130.2: Error: Answer not authoritative (149.358 ms)
+SOA from NS1.HE.NET at 2001:470:100::2: Error: Timeout (20037.944 ms)
+SOA from NS2.HE.NET at 216.218.131.2: Error: Answer not authoritative (157.304 ms)
+SOA from NS2.HE.NET at 2001:470:200::2: Error: Timeout (20012.182 ms)
+SOA from NS3.HE.NET at 216.218.132.2: Error: Answer not authoritative (157.013 ms)
+SOA from NS3.HE.NET at 2001:470:300::2: Error: Timeout (20003.313 ms)
+SOA from NS4.HE.NET at 216.66.1.2: Error: Answer not authoritative (81.287 ms)
+SOA from NS4.HE.NET at 2001:470:400::2: Error: Timeout (20005.814 ms)
+SOA from NS5.HE.NET at 216.66.80.18: Error: Answer not authoritative (9.371 ms)
+SOA from NS5.HE.NET at 2001:470:500::2: Error: Timeout (20007.547 ms)
+
+---- Checking NS records for FULLACCESSTOINTERNET.CN.EU.ORG
+
+NS from NS1.HE.NET at 216.218.130.2: Error: Answer not authoritative (146.691 ms)
+NS from NS1.HE.NET at 2001:470:100::2: Error: Timeout (20013.551 ms)
+NS from NS2.HE.NET at 216.218.131.2: Error: Answer not authoritative (149.837 ms)
+NS from NS2.HE.NET at 2001:470:200::2: Error: Timeout (20006.316 ms)
+NS from NS3.HE.NET at 216.218.132.2: Error: Answer not authoritative (148.397 ms)
+NS from NS3.HE.NET at 2001:470:300::2: Error: Timeout (20030.710 ms)
+NS from NS4.HE.NET at 216.66.1.2: Error: Answer not authoritative (91.870 ms)
+NS from NS4.HE.NET at 2001:470:400::2: Error: Timeout (20043.633 ms)
+NS from NS5.HE.NET at 216.66.80.18: Error: Answer not authoritative (31.036 ms)
+NS from NS5.HE.NET at 2001:470:500::2: Error: Timeout (20001.832 ms)
+
+
+20 errors(s)
