@@ -6,7 +6,7 @@
       "settings": {
         "method": "aes-256-cfb",
         "password": "password",
-        "level": 1,
+        "level": 0,
         "network": "tcp,udp"
       },
       "tag": "in-0",
