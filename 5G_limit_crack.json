@@ -1,31 +1,47 @@
 {
-    "inbound": {
-        "protocol": "shadowsocks",
-        "port": 1234,
-        "settings": {
-            "method": "aes-256-cfb",
-            "password": "password",
-            "udp": true,
-            "level": 1
-        }
-    },
-    "outbound": {
-        "protocol": "freedom",
-        "settings": {}
-    },
-    "inboundDetour": [],
-    "outboundDetour": [
-        {
-            "protocol": "blackhole",
-            "settings": {},
-            "tag": "blocked"
-        }
-    ],
-    "routing": {
-        "strategy": "rules",
-        "settings": {
-            "rules": [
-            ]
-        }
+  "inbounds": [
+    {
+      "port": 1234,
+      "protocol": "shadowsocks",
+      "settings": {
+        "method": "aes-256-cfb",
+        "password": "password",
+        "level": 1,
+        "network": "tcp,udp"
+      },
+      "tag": "in-0",
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {}
+      }
     }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "blocked",
+      "protocol": "blackhole",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked"
+      }
+    ]
+  },
+  "policy": {},
+  "reverse": {},
+  "transport": {}
 }
