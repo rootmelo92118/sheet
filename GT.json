@@ -1,0 +1,1302 @@
+{
+    "dns": {
+        "hosts": {
+            "domain:googleapis.cn": "googleapis.com"
+        },
+        "servers": [
+            "1.1.1.1"
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "0.0.0.0",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "userLevel": 8
+            },
+            "tag": "http"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "outbounds": [
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoaustraliannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Commonwealth of Australia_New South Wales_Sydney"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoaustraliannetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Commonwealth of Australia_Australian Capital Territory_Canberra"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoaustraliannetsubnode2.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Commonwealth of Australia_Victoria_Melbourne"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstobraziliannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Federative Republic of Brazil_São Paulo"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstocanadiannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Canada_Ontario_Toronto"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstocanadiannetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Canada_Quebec_Quebec"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstofrenchnet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "French Republic_Ile-de-France_Paris"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstogermannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Federal Republic of Germany_Hesse_Frankfurt"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstohongkongnet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Peoples Republic of China_Hong Kong"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoindiannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of India_Maharashtra_Pune"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoirishnet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of Ireland_Dublin_Dublin"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstojapannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Japan_Tokyo"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstojapannetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Japan_Osaka"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstokoreannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of Korea_Seoul"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstokoreannetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of Korea_Busan"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstodutchnet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Kingdom of the Netherlands_North Holland_Amsterdam"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstonorwaynet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Kingdom of Norway_Oslo"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstosingaporenet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of Singapore_Singapore"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstosouthafricannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of South Africa_Johannesburg"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoswissnet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Swiss Confederation_Zurich_Zurich"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstouaenet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United Arab Emirates_Dubai_Dubai"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstobritishnet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United Kingdom of Great Britain and Northern Ireland_London"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstobritishnetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United Kingdom of Great Britain and Northern Ireland_Wales_Cardiff"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannet.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Washington_Quincy"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Iowa_Des Moines"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode2.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Virginia_Sterling"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode3.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Virginia_Boydton"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode4.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Texas_San Antonio"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode5.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Wyoming_Cheyenne"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode6.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_California_San Jose"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode7.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Arizona_Phoenix"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsOutboundDownlink": true,
+            "statsOutboundUplink": true
+        }
+    },
+    "routing": {
+        "balancers": [
+            {
+                "selector": [
+                    "Commonwealth of Australia_New South Wales_Sydney",
+                    "Commonwealth of Australia_Australian Capital Territory_Canberra",
+                    "Commonwealth of Australia_Victoria_Melbourne",
+                    "Federative Republic of Brazil_São Paulo",
+                    "Canada_Ontario_Toronto",
+                    "Canada_Quebec_Quebec",
+                    "French Republic_Ile-de-France_Paris",
+                    "Federal Republic of Germany_Hesse_Frankfurt",
+                    "Peoples Republic of China_Hong Kong",
+                    "Republic of India_Maharashtra_Pune",
+                    "Republic of Ireland_Dublin_Dublin",
+                    "Japan_Tokyo",
+                    "Japan_Osaka",
+                    "Republic of Korea_Seoul",
+                    "Republic of Korea_Busan",
+                    "Kingdom of the Netherlands_North Holland_Amsterdam",
+                    "Kingdom of Norway_Oslo",
+                    "Republic of Singapore_Singapore",
+                    "Republic of South Africa_Johannesburg",
+                    "Swiss Confederation_Zurich_Zurich",
+                    "United Arab Emirates_Dubai_Dubai",
+                    "United Kingdom of Great Britain and Northern Ireland_London",
+                    "United Kingdom of Great Britain and Northern Ireland_Wales_Cardiff",
+                    "United States of America_Washington_Quincy",
+                    "United States of America_Iowa_Des Moines",
+                    "United States of America_Virginia_Sterling",
+                    "United States of America_Virginia_Boydton",
+                    "United States of America_Texas_San Antonio",
+                    "United States of America_Wyoming_Cheyenne",
+                    "United States of America_California_San Jose",
+                    "United States of America_Arizona_Phoenix"
+                ],
+                "tag": "GlobalTransportation"
+            }
+        ],
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "balancerTag": "GlobalTransportation",
+                "protocol": ["http","tls"],
+                "network": "tcp,udp",
+                "type": "field"
+            }
+        ]
+    },
+    "stats": {
+    }
+}
