@@ -429,6 +429,82 @@
             "settings": {
                 "vnext": [
                     {
+                        "address": "fullaccesstoindiannetsubnode1.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of India_Tamil Nadu_Chennai"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoindiannetsubnode2.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "Republic of India_Maharashtra_Mumbai"
+        },
+        {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
                         "address": "fullaccesstoirishnet.azurewebsites.net",
                         "port": 443,
                         "users": [
@@ -1262,6 +1338,8 @@
                     "Federal Republic of Germany_Hesse_Frankfurt",
                     "Peoples Republic of China_Hong Kong",
                     "Republic of India_Maharashtra_Pune",
+                    "Republic of India_Tamil Nadu_Chennai",
+                    "Republic of India_Maharashtra_Mumbai",
                     "Republic of Ireland_Dublin_Dublin",
                     "Japan_Tokyo",
                     "Japan_Osaka",
