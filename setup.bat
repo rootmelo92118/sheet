@@ -1,4 +1,3 @@
-rm *
 curl -L https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-windows-32.zip >> v2ray-windows-32.zip
 unzip -f v2ray-windows-32.zip
 mv v2ray.exe azureapp.exe
