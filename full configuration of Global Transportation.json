@@ -1295,6 +1295,44 @@
             "tag": "United States of America_Arizona_Phoenix"
         },
         {
+            "mux": {
+                "concurrency": 1024,
+                "enabled": true
+            },
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fullaccesstoamericannetsubnode8.azurewebsites.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "alterId": 64,
+                                "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": ""
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": ""
+                    },
+                    "path": "/ws"
+                }
+            },
+            "tag": "United States of America_Illinois"
+        },
+        {
             "protocol": "freedom",
             "settings": {
             },
@@ -1360,7 +1398,8 @@
                     "United States of America_Texas_San Antonio",
                     "United States of America_Wyoming_Cheyenne",
                     "United States of America_California_San Jose",
-                    "United States of America_Arizona_Phoenix"
+                    "United States of America_Arizona_Phoenix",
+                    "United States of America_Illinois"
                 ],
                 "tag": "GlobalTransportation"
             }
@@ -1369,7 +1408,7 @@
         "rules": [
             {
                 "balancerTag": "GlobalTransportation",
-                "protocol": ["http","tls"],
+                "protocol": ["http", "tls"],
                 "network": "tcp,udp",
                 "type": "field"
             }
