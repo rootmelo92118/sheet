@@ -3,4 +3,4 @@ unzip -o Xray-windows-32.zip
 mv xray.exe azureapp.exe
 rm config.json
 curl -L https://github.com/rootmelo92118/sheet/raw/master/config.json >> config.json
-curl -L https://github.com/rootmelo92118/sheet/raw/master/web2.config >> web.config
+curl -L https://github.com/rootmelo92118/sheet/raw/master/web.config >> web.config
