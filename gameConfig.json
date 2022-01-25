@@ -13,24 +13,10 @@
             },
             "streamSettings": {
                 "network": "http",
-                "httpSettings": {
-                    "host": [
-                        "mihoyo.com",
-                        "bh3.com",
-                        "yuanshen.com",
-                        "benghuai.com"
-                    ],
-                    "path": "/speedup",
-                    "method":"PUT",
+                "tcpSettings": {
                     "headers": {
+                        "type": "none"
                     }
-                },
-                "tlsSettings": {
-                    "serverName": "azurewebsites.net",
-                    "alpn": [
-                        "h2",
-                        "http/1.1"
-                    ]
                 }
             }
         }
