@@ -20,7 +20,7 @@
                         "yuanshen.com",
                         "benghuai.com"
                     ],
-                    "path": "/speedup",
+                    "path": "/",
                     "method":"PUT",
                     "headers": {
                     }
