@@ -1,0 +1,140 @@
+{
+    "dns": {
+        "hosts": {
+            "domain:example.com": "121.189.57.82",
+"geosite:category-porn": "192.168.33.7"
+        },
+        "servers": [
+            "1.1.1.1"
+        ]
+    },
+    "inbounds": [
+        {
+            "port": 53,
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "1.1.1.1",
+                "network": "tcp,udp",
+                "port": 53
+            },
+            "tag": "dns-in"
+        },
+        {
+            "listen": "0.0.0.0",
+            "port": 1088,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "0.0.0.0",
+            "port": 1089,
+            "protocol": "http",
+            "settings": {
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "http"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "blockhttp"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+            },
+            "tag": "blocknone"
+        },
+        {
+            "protocol": "dns",
+            "tag": "dns-out"
+        }
+    ],
+    "routing": {
+        "balancers": [
+            {
+                "selector": [
+                    "blockhttp",
+                    "blocknone"
+                ],
+                "tag": "blocked"
+            }
+        ],
+        "domainMatcher": "mph",
+        "domainStrategy": "IPOnDemand",
+        "rules": [
+            {
+                "balancerTag": "blocked",
+                "ip": [
+                    "2.2.2.2"
+                ],
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "domain:example.com"
+                ],
+                "outboundTag": "direct",
+                "protocol": [
+                    "http"
+                ],
+                "type": "field"
+            },
+            {
+                "balancerTag": "blocked",
+                "domain": [
+                    "domain:example.com"
+                ],
+                "type": "field"
+            },
+            {
+                "inboundTag": [
+                    "dns-in"
+                ],
+                "outboundTag": "dns-out",
+                "type": "field"
+            },
+            {
+                "network": "tcp,udp",
+                "outboundTag": "direct",
+                "type": "field"
+            }
+        ]
+    },
+    "stats": {
+    }
+}
