@@ -9,3 +9,4 @@ curl -L https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download
 unzip rules.zip geoip.dat
 unzip rules.zip geosite.dat
 rm rule.zip
+rm setup.bat && curl -L https://raw.githubusercontent.com/rootmelo92118/sheet/master/setup.bat >> setup.bat
