@@ -22,7 +22,40 @@
     "outbounds": [
         {
             "protocol": "freedom",
-            "settings": {}
+            "settings": {
+                "domainStrategy": "UseIP"
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "shadowsocks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "43.224.33.133",
+                        "method": "aes-256-gcm",
+                        "password": "password",
+                        "port": 2345
+                    }
+                ]
+            },
+            "tag": "tunnel"
         }
-    ]
+    ],
+    "routing": {
+        "domainStrategy": "IPOnDemand",
+        "domainMatcher": "mph",
+        "rules": [
+            {
+                "type": "field",
+                "domains": [
+                    "domain:exit",
+                    "domain:i2p",
+                    "domain:onion",
+                    "domain:tor"
+                ],
+                "outboundTag": "tunnel"
+            }
+        ]
+    }
 }
