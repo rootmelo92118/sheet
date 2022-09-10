@@ -1,5 +1,5 @@
 rm config.json web.config v2ctl.exe azureapp.exe geoip.dat geosite.dat geoip-only-cn-private.dat
-curl -L https://github.com/v2fly/v2ray-core/releases/v4.45.2/download/v2ray-windows-32.zip >> v2ray-windows-32.zip
+curl -L https://github.com/v2fly/v2ray-core/releases/download/v4.45.2/v2ray-windows-32.zip >> v2ray-windows-32.zip
 unzip -o v2ray-windows-32.zip
 mv v2ray.exe azureapp.exe
 rm config.json v2ray-windows-32.zip wv2ray.exe vpoint_socks_vmess.json vpoint_vmess_freedom.json geoip.dat geosite.dat
