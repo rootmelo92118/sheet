@@ -2,25 +2,25 @@
     "dns": {
         "servers": [
             "localhost",
-                {
-                    "address": "91.217.137.37",
-                    "port": 53,
-                    "skipFallback": false,
-                    "domains": [
-                        "geosite:tld-opennic"
-                    ]
-                },
-                {
-                    "address": "103.1.206.179",
-                    "port": 53,
-                    "skipFallback": false,
-                    "domains": [
-                        "geosite:tld-opennic"
-                    ]
-                },
-                "https+local://cloudflare-dns.com/dns-query",
-                "https+local://dns.google/dns-query"
-            ]
+            {
+                "address": "91.217.137.37",
+                "port": 53,
+                "skipFallback": false,
+                "domains": [
+                    "geosite:tld-opennic"
+                ]
+            },
+            {
+                "address": "103.1.206.179",
+                "port": 53,
+                "skipFallback": false,
+                "domains": [
+                    "geosite:tld-opennic"
+                ]
+            },
+            "https+local://cloudflare-dns.com/dns-query",
+            "https+local://dns.google/dns-query"
+        ]
     },
     "inbounds": [
         {
