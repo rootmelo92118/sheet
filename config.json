@@ -34,8 +34,8 @@
                     {
                         "address": "43.224.33.133",
                         "method": "aes-256-gcm",
-                        "password": "password",
-                        "port": 2345
+                        "password": "tunnel",
+                        "port": 4567
                     }
                 ]
             },
