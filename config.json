@@ -76,10 +76,8 @@
             {
                 "type": "field",
                 "domains": [
-                    "domain:exit",
                     "domain:i2p",
-                    "domain:onion",
-                    "domain:tor"
+                    "geosite:tor"
                 ],
                 "outboundTag": "tunnel"
             },
