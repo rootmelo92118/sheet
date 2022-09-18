@@ -77,12 +77,7 @@
 				"type": "field",
 				"port": "53",
 				"outboundTag": "dns_force_forward"
-			},
-            {
-                "type": "field",
-				"network": "tcp,udp",
-				"outboundTag": "tunnel"
-            }
+			}
         ]
     }
 }
