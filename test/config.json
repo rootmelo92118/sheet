@@ -64,10 +64,10 @@
             },
             "tag": "tunnel"
         },
-		{
-			"tag": "dns_force_forward",
-			"protocol": "dns"
-		}
+	{
+		"tag": "dns_force_forward",
+		"protocol": "dns"
+	}
     ],
     "routing": {
         "domainStrategy": "IPOnDemand",
