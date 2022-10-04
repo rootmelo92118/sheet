@@ -83,7 +83,7 @@
                 "domain":[
 			"geosite:tld-opennic"
 		],
-                "outboundTag": "tunnel"
+                "outboundTag": "direct"
             },
             {
                 "type": "field",
