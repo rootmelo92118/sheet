@@ -80,6 +80,13 @@
             },
             {
                 "type": "field",
+                "domain":[
+			"geosite:tld-opennic"
+		],
+                "outboundTag": "tunnel"
+            },
+            {
+                "type": "field",
                 "network": "tcp,udp",
                 "outboundTag": "tunnel"
             }
