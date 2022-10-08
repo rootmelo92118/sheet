@@ -2,7 +2,7 @@
     "log": {
         "access": "D:\\home\\site\\wwwroot\\access.log",
         "error": "D:\\home\\site\\wwwroot\\error.log",
-	"loglevel": "warning",
+	"loglevel": "warning"
     },
     "dns": {
         "servers": [
