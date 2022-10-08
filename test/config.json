@@ -35,9 +35,9 @@
                 ]
             },
             "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "/ws"
+                "network": "grpc",
+                "grpcSettings": {
+                    "serviceName": "ws"
                 }
             }
         }
