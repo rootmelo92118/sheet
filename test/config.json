@@ -35,9 +35,9 @@
                 ]
             },
             "streamSettings": {
-                 "network": "gun",
+                 "network": "grpc",
                  "grpcSettings": {
-                    "serviceName": "ws"
+                    "serviceName": "GunService"
                 }
              }
         }
