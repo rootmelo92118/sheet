@@ -35,10 +35,10 @@
                 ]
             },
             "streamSettings": {
-                 "network": "ws",
-                 "wsSettings": {
-                     "path": "/ws"
-                 }
+                 "network": "gun",
+                 "grpcSettings": {
+                    "serviceName": "ws"
+                }
              }
         }
     ],
