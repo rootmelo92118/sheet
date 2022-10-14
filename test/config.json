@@ -75,18 +75,6 @@
         "rules": [
             {
                 "type": "field",
-                "port": "53",
-                "outboundTag": "dns_force_forward"
-            },
-            {
-                "type": "field",
-                "domain":[
-			"geosite:tld-opennic"
-		],
-                "outboundTag": "direct"
-            },
-            {
-                "type": "field",
                 "network": "tcp,udp",
                 "outboundTag": "tunnel"
             }
