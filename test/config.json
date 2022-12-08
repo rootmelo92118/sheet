@@ -24,7 +24,7 @@
     },
     "inbounds": [
         {
-            "port": "env:HTTP_PLATFORM_PORT",
+            "port": "env:ASPNETCORE_PORT",
             "protocol": "vmess",
             "settings": {
                 "clients": [
