@@ -1,0 +1,4 @@
+|restrictmoderate.youtube.com^$dnsrewrite=NOERROR;CNAME;youtube.com
+|forcesafesearch.google.com^$dnsrewrite=NOERROR;CNAME;google.com
+|safesearch.pixabay.com^$dnsrewrite=NOERROR;CNAME;pixabay.com
+|213.180.193.56^$dnsrewrite=NOERROR;CNAME;yandex.com
