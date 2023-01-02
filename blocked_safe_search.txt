@@ -1,0 +1,6 @@
+|strict.bing.com^
+|safe.duckduckgo.com^
+|restrictmoderate.youtube.com^
+|forcesafesearch.google.com^
+|safesearch.pixabay.com^
+|213.180.193.56^
