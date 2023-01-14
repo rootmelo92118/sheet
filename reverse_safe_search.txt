@@ -234,7 +234,7 @@
 |www.yandex.sx^$dnsrewrite=NOERROR;CNAME;yandex.sx
 |www.yandex.tj^$dnsrewrite=NOERROR;CNAME;yandex.tj
 |www.yandex.tm^$dnsrewrite=NOERROR;CNAME;yandex.tm
-|www.yandex.ua^$dnsrewrite=NOERROR;CNAME;yandex.ua
+|www.yandex.ua^$dnsrewrite=NOERROR;CNAME;yandex.com
 |www.yandex.uz^$dnsrewrite=NOERROR;CNAME;yandex.uz
 |xn--d1acpjx3f.xn--p1ai^$dnsrewrite=NOERROR;CNAME;xn--d1acpjx3f.xn--p1ai
 |ya.ru^$dnsrewrite=NOERROR;CNAME;ya.ru
@@ -245,7 +245,7 @@
 |yandex.com.ge^$dnsrewrite=NOERROR;CNAME;yandex.com.ge
 |yandex.com.ru^$dnsrewrite=NOERROR;CNAME;yandex.com.ru
 |yandex.com.tr^$dnsrewrite=NOERROR;CNAME;yandex.com.tr
-|yandex.com.ua^$dnsrewrite=NOERROR;CNAME;yandex.com.ua
+|yandex.com.ua^$dnsrewrite=NOERROR;CNAME;yandex.com
 |yandex.com^$dnsrewrite=NOERROR;CNAME;yandex.com
 |yandex.de^$dnsrewrite=NOERROR;CNAME;yandex.de
 |yandex.ee^$dnsrewrite=NOERROR;CNAME;yandex.ee
