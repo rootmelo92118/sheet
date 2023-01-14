@@ -214,7 +214,7 @@
 |www.yandex.com.ge^$dnsrewrite=NOERROR;CNAME;yandex.com.ge
 |www.yandex.com.ru^$dnsrewrite=NOERROR;CNAME;yandex.com.ru
 |www.yandex.com.tr^$dnsrewrite=NOERROR;CNAME;yandex.com.tr
-|www.yandex.com.ua^$dnsrewrite=NOERROR;CNAME;yandex.com.ua
+|www.yandex.com.ua^$dnsrewrite=NOERROR;CNAME;yandex.com
 |www.yandex.com^$dnsrewrite=NOERROR;CNAME;yandex.com
 |www.yandex.de^$dnsrewrite=NOERROR;CNAME;yandex.de
 |www.yandex.ee^$dnsrewrite=NOERROR;CNAME;yandex.ee
