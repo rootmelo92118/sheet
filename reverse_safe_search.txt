@@ -214,14 +214,12 @@
 |www.yandex.com.ge^$dnsrewrite=NOERROR;CNAME;yandex.com.ge
 |www.yandex.com.ru^$dnsrewrite=NOERROR;CNAME;yandex.com.ru
 |www.yandex.com.tr^$dnsrewrite=NOERROR;CNAME;yandex.com.tr
-|www.yandex.com.ua^$dnsrewrite=NOERROR;CNAME;yandex.com.ua
 |www.yandex.com^$dnsrewrite=NOERROR;CNAME;yandex.com
 |www.yandex.de^$dnsrewrite=NOERROR;CNAME;yandex.de
 |www.yandex.ee^$dnsrewrite=NOERROR;CNAME;yandex.ee
 |www.yandex.eu^$dnsrewrite=NOERROR;CNAME;yandex.eu
 |www.yandex.fi^$dnsrewrite=NOERROR;CNAME;yandex.fi
 |www.yandex.fr^$dnsrewrite=NOERROR;CNAME;yandex.fr
-|www.yandex.kg^$dnsrewrite=NOERROR;CNAME;yandex.kg
 |www.yandex.kz^$dnsrewrite=NOERROR;CNAME;yandex.kz
 |www.yandex.lt^$dnsrewrite=NOERROR;CNAME;yandex.lt
 |www.yandex.lv^$dnsrewrite=NOERROR;CNAME;yandex.lv
@@ -230,11 +228,8 @@
 |www.yandex.org^$dnsrewrite=NOERROR;CNAME;yandex.org
 |www.yandex.pl^$dnsrewrite=NOERROR;CNAME;yandex.pl
 |www.yandex.ru^$dnsrewrite=NOERROR;CNAME;yandex.ru
-|www.yandex.st^$dnsrewrite=NOERROR;CNAME;yandex.st
-|www.yandex.sx^$dnsrewrite=NOERROR;CNAME;yandex.sx
 |www.yandex.tj^$dnsrewrite=NOERROR;CNAME;yandex.tj
 |www.yandex.tm^$dnsrewrite=NOERROR;CNAME;yandex.tm
-|www.yandex.ua^$dnsrewrite=NOERROR;CNAME;yandex.ua
 |www.yandex.uz^$dnsrewrite=NOERROR;CNAME;yandex.uz
 |xn--d1acpjx3f.xn--p1ai^$dnsrewrite=NOERROR;CNAME;xn--d1acpjx3f.xn--p1ai
 |ya.ru^$dnsrewrite=NOERROR;CNAME;ya.ru
@@ -245,14 +240,12 @@
 |yandex.com.ge^$dnsrewrite=NOERROR;CNAME;yandex.com.ge
 |yandex.com.ru^$dnsrewrite=NOERROR;CNAME;yandex.com.ru
 |yandex.com.tr^$dnsrewrite=NOERROR;CNAME;yandex.com.tr
-|yandex.com.ua^$dnsrewrite=NOERROR;CNAME;yandex.com.ua
 |yandex.com^$dnsrewrite=NOERROR;CNAME;yandex.com
 |yandex.de^$dnsrewrite=NOERROR;CNAME;yandex.de
 |yandex.ee^$dnsrewrite=NOERROR;CNAME;yandex.ee
 |yandex.eu^$dnsrewrite=NOERROR;CNAME;yandex.eu
 |yandex.fi^$dnsrewrite=NOERROR;CNAME;yandex.fi
 |yandex.fr^$dnsrewrite=NOERROR;CNAME;yandex.fr
-|yandex.kg^$dnsrewrite=NOERROR;CNAME;yandex.kg
 |yandex.kz^$dnsrewrite=NOERROR;CNAME;yandex.kz
 |yandex.lt^$dnsrewrite=NOERROR;CNAME;yandex.lt
 |yandex.lv^$dnsrewrite=NOERROR;CNAME;yandex.lv
@@ -261,11 +254,8 @@
 |yandex.org^$dnsrewrite=NOERROR;CNAME;yandex.org
 |yandex.pl^$dnsrewrite=NOERROR;CNAME;yandex.pl
 |yandex.ru^$dnsrewrite=NOERROR;CNAME;yandex.ru
-|yandex.st^$dnsrewrite=NOERROR;CNAME;yandex.st
-|yandex.sx^$dnsrewrite=NOERROR;CNAME;yandex.sx
 |yandex.tj^$dnsrewrite=NOERROR;CNAME;yandex.tj
 |yandex.tm^$dnsrewrite=NOERROR;CNAME;yandex.tm
-|yandex.ua^$dnsrewrite=NOERROR;CNAME;yandex.ua
 |yandex.uz^$dnsrewrite=NOERROR;CNAME;yandex.uz
 #
 # YouTube
