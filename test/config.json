@@ -55,7 +55,7 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "43.224.33.133",
+                        "address": "103.61.139.106",
                         "method": "aes-256-gcm",
                         "password": "tunnel",
                         "port": 4567
