@@ -3,7 +3,7 @@
         "servers": [
             "localhost",
             {
-                "address": "91.217.137.37",
+                "address": "172.104.162.222",
                 "port": 53,
                 "skipFallback": false,
                 "domains": [
