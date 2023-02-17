@@ -1,4 +1,4 @@
-rm config.json web.config azureapp.exe geoip.dat geosite.dat geoip-only-cn-private.dat
+rm config.json web.config azureapp.exe geoip.dat geosite.dat
 curl -L https://github.com/XTLS/Xray-core/releases/latest/download/Xray-windows-32.zip >> Xray-windows-32.zip
 unzip -o Xray-windows-32.zip
 mv xray.exe azureapp.exe
