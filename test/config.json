@@ -55,7 +55,7 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "167.179.78.123",
+                        "address": "103.61.139.106",
                         "method": "aes-256-gcm",
                         "password": "nodetw",
                         "port": 6789
