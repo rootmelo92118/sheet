@@ -80,7 +80,8 @@
             },
 	    {
                 "domain":[
-                    "geosite:google"
+                    "geosite:google",
+		    "geosite:speestest"
                 ],
                 "outboundTag":"direct",
                 "type":"field"
