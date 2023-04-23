@@ -109,6 +109,16 @@
                 "outboundTag": "tunnel"
             },
 	    {
+		"type":"field",
+                "ip":[
+                    "geoip:cloudflare",
+                    "geoip:cloudfront",
+                    "geoip:facebook",
+                    "geoip:fastly"
+                ],
+                "outboundTag":"direct"
+            },
+	    {
                 "ip":[
                     "geoip:ad",
                     "geoip:al",
@@ -163,16 +173,6 @@
                     "geoip:va"
                 ],
                 "outboundTag":"tunnel",
-                "type":"field"
-            },
-	    {
-                "ip":[
-                    "geoip:cloudflare",
-                    "geoip:cloudfront",
-                    "geoip:facebook",
-                    "geoip:fastly"
-                ],
-                "outboundTag":"direct",
                 "type":"field"
             },
             {
