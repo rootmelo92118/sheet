@@ -81,7 +81,8 @@
             {
                 "domain":[
                     "geosite:google",
-                    "geosite:speedtest"
+                    "geosite:speedtest",
+                    "geosite:ipip"
                 ],
                 "outboundTag":"direct",
                 "type":"field"
