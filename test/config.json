@@ -170,8 +170,7 @@
                     "geoip:cloudflare",
                     "geoip:cloudfront",
                     "geoip:facebook",
-                    "geoip:fastly",
-                    "geoip:google"
+                    "geoip:fastly"
                 ],
                 "outboundTag":"direct",
                 "type":"field"
