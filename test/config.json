@@ -1,4 +1,9 @@
 {
+    "log":{
+        "access":"D:\\site\\wwwroot\\access.log",
+        "error":"D:\\site\\wwwroot\\error.log",
+        "loglevel":"warning"
+    },
     "dns":{
         "servers":[
             "localhost",
