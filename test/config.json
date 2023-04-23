@@ -55,7 +55,7 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "103.61.139.106",
+                        "address": "167.179.78.123",
                         "method": "aes-256-gcm",
                         "password": "nodetw",
                         "port": 6789
@@ -78,17 +78,108 @@
                 "port": "53",
                 "outboundTag": "dns_force_forward"
             },
+	    {
+                "domain":[
+                    "geosite:google"
+                ],
+                "outboundTag":"direct",
+                "type":"field"
+            },
             {
                 "type": "field",
                 "domain":[
-			"geosite:tld-opennic"
+		    "geosite:tor",
+		    "domain:i2p",
+		    "geosite:netflix",
+                    "geosite:disney",
+                    "geosite:bilibili",
+                    "geosite:bahamut",
+		    "geosite:dcard",
+                    "geosite:18comic",
+                    "domain:linetv.tw",
+                    "geosite:hamivideo",
+                    "geosite:hbo",
+                    "domain:4gtv.tv",
+                    "domain:myvideo.net.tw",
+                    "geosite:kktv",
+                    "geosite:litv",
+                    "geosite:catchplay",
+                    "geosite:openai"
 		],
-                "outboundTag": "direct"
+                "outboundTag": "tunnel"
+            },
+	    {
+                "ip":[
+                    "geoip:ad",
+                    "geoip:al",
+                    "geoip:at",
+                    "geoip:ax",
+                    "geoip:ba",
+                    "geoip:be",
+                    "geoip:bg",
+                    "geoip:by",
+                    "geoip:ch",
+                    "geoip:cz",
+                    "geoip:de",
+                    "geoip:dk",
+                    "geoip:ee",
+                    "geoip:es",
+                    "geoip:fi",
+                    "geoip:fo",
+                    "geoip:fr",
+                    "geoip:gb",
+                    "geoip:gg",
+                    "geoip:gi",
+                    "geoip:gr",
+                    "geoip:hr",
+                    "geoip:hu",
+                    "geoip:ie",
+                    "geoip:im",
+                    "geoip:is",
+                    "geoip:it",
+                    "geoip:je",
+		    "geoip:jp",
+                    "geoip:li",
+                    "geoip:lt",
+                    "geoip:lu",
+                    "geoip:lv",
+                    "geoip:mc",
+                    "geoip:md",
+                    "geoip:me",
+                    "geoip:mk",
+                    "geoip:mt",
+                    "geoip:nl",
+                    "geoip:no",
+                    "geoip:pl",
+                    "geoip:pt",
+                    "geoip:ro",
+                    "geoip:rs",
+                    "geoip:se",
+                    "geoip:si",
+                    "geoip:sk",
+                    "geoip:sm",
+		    "geoip:tw",
+                    "geoip:ua",
+                    "geoip:va"
+                ],
+                "outboundTag":"tunnel",
+                "type":"field"
+            },
+	    {
+                "ip":[
+                    "geoip:cloudflare",
+                    "geoip:cloudfront",
+                    "geoip:facebook",
+                    "geoip:fastly",
+                    "geoip:google"
+                ],
+                "outboundTag":"direct",
+                "type":"field"
             },
             {
                 "type": "field",
                 "network": "tcp,udp",
-                "outboundTag": "tunnel"
+                "outboundTag": "direct"
             }
         ]
     }
