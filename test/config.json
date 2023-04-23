@@ -1,20 +1,20 @@
 {
-    "dns": {
-        "servers": [
+    "dns":{
+        "servers":[
             "localhost",
             {
-                "address": "172.104.162.222",
-                "port": 53,
-                "skipFallback": false,
-                "domains": [
+                "address":"172.104.162.222",
+                "port":53,
+                "skipFallback":false,
+                "domains":[
                     "geosite:tld-opennic"
                 ]
             },
             {
-                "address": "103.1.206.179",
-                "port": 53,
-                "skipFallback": false,
-                "domains": [
+                "address":"103.1.206.179",
+                "port":53,
+                "skipFallback":false,
+                "domains":[
                     "geosite:tld-opennic"
                 ]
             },
@@ -22,80 +22,80 @@
             "https+local://dns.google/dns-query"
         ]
     },
-    "inbounds": [
+    "inbounds":[
         {
-            "port": "env:HTTP_PLATFORM_PORT",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
+            "port":"env:HTTP_PLATFORM_PORT",
+            "protocol":"vmess",
+            "settings":{
+                "clients":[
                     {
-                        "id": "274f11c6-f69b-40b9-8966-f39e06e97be7",
-                        "alterId": 0
+                        "id":"274f11c6-f69b-40b9-8966-f39e06e97be7",
+                        "alterId":0
                     }
                 ]
             },
-            "streamSettings": {
-                 "network": "ws",
-                 "wsSettings": {
-                     "path": "/ws"
-                 }
-             }
+            "streamSettings":{
+                "network":"ws",
+                "wsSettings":{
+                    "path":"/ws"
+                }
+            }
         }
     ],
-    "outbounds": [
+    "outbounds":[
         {
-            "protocol": "freedom",
-            "settings": {
-                "domainStrategy": "UseIP"
+            "protocol":"freedom",
+            "settings":{
+                "domainStrategy":"UseIP"
             },
-            "tag": "direct"
+            "tag":"direct"
         },
         {
-            "protocol": "shadowsocks",
-            "settings": {
-                "servers": [
+            "protocol":"shadowsocks",
+            "settings":{
+                "servers":[
                     {
-                        "address": "167.179.78.123",
-                        "method": "aes-256-gcm",
-                        "password": "nodejp",
-                        "port": 6789
+                        "address":"167.179.78.123",
+                        "method":"aes-256-gcm",
+                        "password":"nodejp",
+                        "port":6789
                     }
                 ]
             },
-            "tag": "tunnel"
+            "tag":"tunnel"
         },
-	{
-		"tag": "dns_force_forward",
-		"protocol": "dns"
-	}
+        {
+            "tag":"dns_force_forward",
+            "protocol":"dns"
+        }
     ],
-    "routing": {
-        "domainStrategy": "IPOnDemand",
-        "domainMatcher": "mph",
-        "rules": [
+    "routing":{
+        "domainStrategy":"IPOnDemand",
+        "domainMatcher":"mph",
+        "rules":[
             {
-                "type": "field",
-                "port": "53",
-                "outboundTag": "dns_force_forward"
+                "type":"field",
+                "port":"53",
+                "outboundTag":"dns_force_forward"
             },
-	    {
+            {
                 "domain":[
                     "geosite:google",
-		    "geosite:speestest"
+                    "geosite:speedtest"
                 ],
                 "outboundTag":"direct",
                 "type":"field"
             },
             {
-                "type": "field",
+                "type":"field",
                 "domain":[
-		    "geosite:tor",
-		    "domain:i2p",
-		    "geosite:netflix",
+                    "geosite:tor",
+                    "domain:i2p",
+                    "geosite:netflix",
                     "geosite:disney",
                     "geosite:bilibili",
                     "geosite:bahamut",
-		    "geosite:dcard",
+                    "geosite:dcard",
                     "geosite:18comic",
                     "domain:linetv.tw",
                     "geosite:hamivideo",
@@ -106,11 +106,11 @@
                     "geosite:litv",
                     "geosite:catchplay",
                     "geosite:openai"
-		],
-                "outboundTag": "tunnel"
+                ],
+                "outboundTag":"tunnel"
             },
-	    {
-		"type":"field",
+            {
+                "type":"field",
                 "ip":[
                     "geoip:cloudflare",
                     "geoip:cloudfront",
@@ -119,7 +119,7 @@
                 ],
                 "outboundTag":"direct"
             },
-	    {
+            {
                 "ip":[
                     "geoip:ad",
                     "geoip:al",
@@ -149,7 +149,7 @@
                     "geoip:is",
                     "geoip:it",
                     "geoip:je",
-		    "geoip:jp",
+                    "geoip:jp",
                     "geoip:li",
                     "geoip:lt",
                     "geoip:lu",
@@ -169,7 +169,7 @@
                     "geoip:si",
                     "geoip:sk",
                     "geoip:sm",
-		    "geoip:tw",
+                    "geoip:tw",
                     "geoip:ua",
                     "geoip:va"
                 ],
@@ -177,9 +177,9 @@
                 "type":"field"
             },
             {
-                "type": "field",
-                "network": "tcp,udp",
-                "outboundTag": "direct"
+                "type":"field",
+                "network":"tcp,udp",
+                "outboundTag":"direct"
             }
         ]
     }
