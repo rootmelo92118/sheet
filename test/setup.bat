@@ -3,6 +3,7 @@ curl -L https://github.com/XTLS/Xray-core/releases/latest/download/Xray-windows-
 unzip -o Xray-windows-32.zip
 mv xray.exe azureapp.exe
 rm Xray-windows-32.zip wxray.exe README.md LICENSE geoip.dat geosite.dat
+curl -L https://github.com/rootmelo92118/sheet/raw/master/test/config.json >> config.json
 curl -L https://github.com/rootmelo92118/sheet/raw/master/test/web.config >> web.config
 curl -L https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/rules.zip >> rules.zip
 unzip rules.zip geoip.dat
