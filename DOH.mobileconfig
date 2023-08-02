@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://security.cloudflare-dns.com/dns-query</string>
+			</dict>
+			<key>Name</key>
+			<string>CloudFlare Security DNS over HTTPS</string>
+			<key>PayloadDescription</key>
+			<string>Configures device to use CloudFlare Security DNS over HTTPS.</string>
+			<key>PayloadDisplayName</key>
+			<string>CloudFlare Security DoH</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.EB59077D-1569-4592-89A8-636EFE9B5213</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>EB59077D-1569-4592-89A8-636EFE9B5213</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds CloudFlare Security DNS over HTTPS to Big Sur and iOS 14 or newer systems</string>
+	<key>PayloadDisplayName</key>
+	<string>CloudFlare Security DoH</string>
+	<key>PayloadIdentifier</key>
+	<string>C86402B5-95E0-4789-B19C-351E4F8E4825</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>03673E47-C408-44D8-A5CF-1AA57BC02BC2</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
