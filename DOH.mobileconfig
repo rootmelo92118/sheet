@@ -11,14 +11,14 @@
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
 				<key>ServerURL</key>
-				<string>https://security.cloudflare-dns.com/dns-query</string>
+				<string>https://dns.fullaccesstointernet.jp.eu.org/dns-query</string>
 			</dict>
 			<key>Name</key>
-			<string>CloudFlare Security DNS over HTTPS</string>
+			<string>Full Access To Internet DNS over HTTPS</string>
 			<key>PayloadDescription</key>
-			<string>Configures device to use CloudFlare Security DNS over HTTPS.</string>
+			<string>Configures device to use Full Access To Internet DNS over HTTPS.</string>
 			<key>PayloadDisplayName</key>
-			<string>CloudFlare Security DoH</string>
+			<string>Full Access To Internet DoH</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.EB59077D-1569-4592-89A8-636EFE9B5213</string>
 			<key>PayloadType</key>
@@ -30,9 +30,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds CloudFlare Security DNS over HTTPS to Big Sur and iOS 14 or newer systems</string>
+	<string>Adds Full Access To Internet DNS over HTTPS to Big Sur and iOS 14 or newer systems</string>
 	<key>PayloadDisplayName</key>
-	<string>CloudFlare Security DoH</string>
+	<string>Full Access To Internet DoH</string>
 	<key>PayloadIdentifier</key>
 	<string>C86402B5-95E0-4789-B19C-351E4F8E4825</string>
 	<key>PayloadRemovalDisallowed</key>
