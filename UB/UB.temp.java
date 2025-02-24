@@ -5,19 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class AnimalServlet
- */
-@WebServlet("/AnimalServlet") // 更正WebServlet路徑
-public class AnimalServlet extends HttpServlet {
+@WebServlet("/DataServlet")
+public class DataServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private Connection conn;
@@ -25,10 +20,10 @@ public class AnimalServlet extends HttpServlet {
     public void init() throws ServletException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jq_sample?useUnicode=true&characterEncoding=utf8", "test", "test");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/your_database_name?useUnicode=true&characterEncoding=utf8", "your_username", "your_password"); // 替換成您的資料庫資訊
         } catch (Exception e) {
             e.printStackTrace();
-            throw new ServletException("Database connection failed: " + e.getMessage()); // 抛出ServletException
+            throw new ServletException("Database connection failed: " + e.getMessage());
         }
     }
 
@@ -40,96 +35,132 @@ public class AnimalServlet extends HttpServlet {
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
-    }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/plain");
+        response.setContentType("text/html");
 
         try {
-            String action = request.getParameter("do");
+            String action = request.getParameter("action");
             if (action != null) {
                 switch (action) {
-                    case "select":
-                        selectAnimals(request, response);
+                    case "list":
+                        listData(request, response);
+                        break;
+                    case "add":
+                        addData(request, response);
                         break;
                     case "update":
-                        updateAnimal(request, response);
+                        updateData(request, response);
                         break;
                     case "delete":
-                        deleteAnimal(request, response);
+                        deleteData(request, response);
                         break;
-                    case "insert":
-                        insertAnimal(request, response);
+                    case "checkIDNo": // 檢查身分證字號
+                        checkIDNo(request, response);
                         break;
                     default:
-                        response.getWriter().write("Invalid action"); // 處理無效的 action
+                        response.getWriter().write("Invalid action");
                 }
             } else {
-                response.getWriter().write("Action parameter is missing"); // 處理缺少 action 參數的情況
+                response.getWriter().write("Action parameter is missing");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            response.getWriter().write("Database error: " + e.getMessage()); // 將錯誤訊息回傳給前端
+            response.getWriter().write("Database error: " + e.getMessage());
         }
     }
 
-    private void selectAnimals(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        int start = Integer.parseInt(request.getParameter("start"));
-        String sql = "SELECT * FROM ajax_animal LIMIT " + start + ", 10";
+    private void listData(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+        try (PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM your_table_name")) { // 替換成您的資料表名稱
+            try (ResultSet rs = pstmt.executeQuery()) {
+                PrintWriter out = response.getWriter();
 
-        try (PreparedStatement pstmt = conn.prepareStatement(sql);
-             ResultSet rs = pstmt.executeQuery()) { // 使用 PreparedStatement
+                out.println("<thead><tr>");
+                out.println("<th>ID</th>");
+                out.println("<th>IDNo</th>");
+                out.println("<th>Name</th>");
+                out.println("<th>PhoneNumber</th>");
+                out.println("<th>Address</th>");
+                out.println("<th>Notice</th>");
+                out.println("<th>Actions</th>");
+                out.println("</tr></thead><tbody>");
 
-            PrintWriter out = response.getWriter();
-            while (rs.next()) {
-                out.println("<tr>");
-                out.println("<td>" + rs.getInt("id") + "</td>");
-                out.println("<td class='name'>" + rs.getString("name") + "</td>");
-                out.println("<td>" + rs.getDouble("weight") + "</td>");
-                out.println("<td>" + rs.getString("info") + "</td>");
-                out.println("<td>" + rs.getTimestamp("date") + "</td>");
-                out.println("<td>");
-                out.println("<button class='mdy'>修改</button>");
-                out.println("<button onclick='del(this)'>刪除</button>");
-                out.println("</td>");
-                out.println("</tr>");
+                while (rs.next()) {
+                    out.println("<tr>");
+                    out.println("<td>" + rs.getInt("id") + "</td>");
+                    out.println("<td>" + rs.getString("IDNo") + "</td>");
+                    out.println("<td>" + rs.getString("name") + "</td>");
+                    out.println("<td>" + rs.getString("phoneNumber") + "</td>");
+                    out.println("<td>" + rs.getString("address") + "</td>");
+                    out.println("<td>" + rs.getString("notice") + "</td>");
+                    out.println("<td>");
+                    out.println("<button class='btn btn-warning btn-sm mdy' data-id='" + rs.getInt("id") + "' data-idno='" + rs.getString("IDNo") + "' data-name='" + rs.getString("name") + "' data-phonenumber='" + rs.getString("phoneNumber") + "' data-address='" + rs.getString("address") + "' data-notice='" + rs.getString("notice") + "'>修改</button>");
+                    out.println("<button class='btn btn-danger btn-sm del' data-id='" + rs.getInt("id") + "'>删除</button>");
+                    out.println("</td>");
+                    out.println("</tr>");
+                }
+
+                out.println("</tbody>");
             }
         }
     }
 
-
-    private void updateAnimal(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
+    private void addData(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+        String idNo = request.getParameter("IDNo");
         String name = request.getParameter("name");
-        double weight = Double.parseDouble(request.getParameter("weight"));
-        String info = request.getParameter("info");
+        String phoneNumber = request.getParameter("phoneNumber");
+        String address = request.getParameter("address");
+        String notice = request.getParameter("notice");
 
-        String sql = "UPDATE ajax_animal SET name=?, weight=?, info=?, date=NOW() WHERE id=?";
+        String sql = "INSERT INTO your_table_name (IDNo, name, phoneNumber, address, notice) VALUES (?, ?, ?, ?, ?)"; // 替換成您的資料表名稱
 
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, name);
-            pstmt.setDouble(2, weight);
-            pstmt.setString(3, info);
-            pstmt.setInt(4, id);
+            pstmt.setString(1, idNo);
+            pstmt.setString(2, name);
+            pstmt.setString(3, phoneNumber);
+            pstmt.setString(4, address);
+            pstmt.setString(5, notice);
 
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected > 0) {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String formattedDate = sdf.format(new Date());
-                response.getWriter().write(formattedDate);
+                response.getWriter().write("inserted");
             } else {
-                response.getWriter().write("Update failed"); // 處理更新失敗的情況
+                response.getWriter().write("Insert failed");
             }
         }
     }
 
-    private void deleteAnimal(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+    private void updateData(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        String sql = "DELETE FROM ajax_animal WHERE id=?";
+        String idNo = request.getParameter("IDNo");
+        String name = request.getParameter("name");
+        String phoneNumber = request.getParameter("phoneNumber");
+        String address = request.getParameter("address");
+        String notice = request.getParameter("notice");
+
+        String sql = "UPDATE your_table_name SET IDNo=?, name=?, phoneNumber=?, address=?, notice=? WHERE id=?"; // 替換成您的資料表名稱
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, idNo);
+            pstmt.setString(2, name);
+            pstmt.setString(3, phoneNumber);
+            pstmt.setString(4, address);
+            pstmt.setString(5, notice);
+            pstmt.setInt(6, id);
+
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                response.getWriter().write("updated");
+            } else {
+                response.getWriter().write("Update failed");
+            }
+        }
+    }
+
+    private void deleteData(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String sql = "DELETE FROM your_table_name WHERE id=?"; // 替換成您的資料表名稱
 
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, id);
@@ -137,29 +168,19 @@ public class AnimalServlet extends HttpServlet {
             if (rowsAffected > 0) {
                 response.getWriter().write("deleted");
             } else {
-                response.getWriter().write("Delete failed"); // 處理刪除失敗的情況
+                response.getWriter().write("Delete failed");
             }
         }
     }
 
-    private void insertAnimal(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        String name = request.getParameter("name");
-        double weight = Double.parseDouble(request.getParameter("weight"));
-        String info = request.getParameter("info");
-
-        String sql = "INSERT INTO ajax_animal (name, weight, info, date) VALUES (?, ?, ?, NOW())";
-
-        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, name);
-            pstmt.setDouble(2, weight);
-            pstmt.setString(3, info);
-
-            int rowsAffected = pstmt.executeUpdate();
-            if (rowsAffected > 0) {
-                response.getWriter().write("inserted");
-            } else {
-                response.getWriter().write("Insert failed"); // 處理新增失敗的情況
-            }
+    private void checkIDNo(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String idNo = request.getParameter("IDNo");
+        if (check(idNo)) { // 假設 check() 函數存在
+            response.getWriter().write("valid");
+        } else {
+            response.getWriter().write("invalid");
         }
     }
+
+    // ... (check() 函數的實作，這裡省略)
 }
