@@ -1,130 +1,41 @@
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.io.*;
-import java.sql.*;
-import java.util.Date;
-import java.text.SimpleDateFormat;
 
-public class AnimalServlet extends HttpServlet {
 
-    private Connection conn;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-    public void init() throws ServletException {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); // MySQL 驅動程式
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jq_sample?useUnicode=true&characterEncoding=utf8", "test", "test");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+/**
+ * Servlet implementation class servlet
+ */
+@WebServlet("/servlet")
+public class servlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public servlet() {
+        super();
+        // TODO Auto-generated constructor stub
     }
 
-    public void destroy() {
-        try {
-            if (conn != null) conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
-    }
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/plain");
-
-        try {
-            String action = request.getParameter("do");
-            if (action != null) {
-                switch (action) {
-                    case "select":
-                        selectAnimals(request, response);
-                        break;
-                    case "update":
-                        updateAnimal(request, response);
-                        break;
-                    case "delete":
-                        deleteAnimal(request, response);
-                        break;
-                    case "insert":
-                        insertAnimal(request, response);
-                        break;
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void selectAnimals(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        int start = Integer.parseInt(request.getParameter("start"));
-        String sql = "SELECT * FROM ajax_animal LIMIT " + start + ", 10";
-        try (Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-            PrintWriter out = response.getWriter();
-            while (rs.next()) {
-                out.println("<tr>");
-                out.println("<td>" + rs.getInt("id") + "</td>");
-                out.println("<td class='name'>" + rs.getString("name") + "</td>");
-                out.println("<td>" + rs.getDouble("weight") + "</td>");
-                out.println("<td>" + rs.getString("info") + "</td>");
-                out.println("<td>" + rs.getTimestamp("date") + "</td>");
-                out.println("<td>");
-                out.println("<button class='mdy'>修改</button>");
-                out.println("<button onclick='del(this)'>刪除</button>");
-                out.println("</td>");
-                out.println("</tr>");
-            }
-        }
-    }
-
-    private void updateAnimal(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        double weight = Double.parseDouble(request.getParameter("weight"));
-        String info = request.getParameter("info");
-        String sql = "UPDATE ajax_animal SET name=?, weight=?, info=?, date=NOW() WHERE id=?";
-        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, name);
-            pstmt.setDouble(2, weight);
-            pstmt.setString(3, info);
-            pstmt.setInt(4, id);
-            int rowsAffected = pstmt.executeUpdate();
-            if (rowsAffected > 0) {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String formattedDate = sdf.format(new Date());
-                response.getWriter().write(formattedDate);
-            }
-        }
-    }
-
-    private void deleteAnimal(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String sql = "DELETE FROM ajax_animal WHERE id=?";
-        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, id);
-            int rowsAffected = pstmt.executeUpdate();
-            if (rowsAffected > 0) {
-                response.getWriter().write("deleted");
-            }
-        }
-    }
-
-    private void insertAnimal(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-        String name = request.getParameter("name");
-        double weight = Double.parseDouble(request.getParameter("weight"));
-        String info = request.getParameter("info");
-        String sql = "INSERT INTO ajax_animal (name, weight, info, date) VALUES (?, ?, ?, NOW())";
-        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, name);
-            pstmt.setDouble(2, weight);
-            pstmt.setString(3, info);
-            int rowsAffected = pstmt.executeUpdate();
-            if (rowsAffected > 0) {
-                response.getWriter().write("inserted");
-            }
-        }
-    }
 }
