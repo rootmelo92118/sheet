@@ -1,0 +1,272 @@
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Server version name:   Apache Tomcat/9.0.99
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Server built:          Feb 4 2025 20:08:08 UTC
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Server version number: 9.0.99.0
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: OS Name:               Windows 10
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: OS Version:            10.0
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Architecture:          amd64
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Java Home:             C:\Program Files\Zulu\zulu-17
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: JVM Version:           17.0.14+7-LTS
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: JVM Vendor:            Azul Systems, Inc.
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: CATALINA_BASE:         D:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: CATALINA_HOME:         D:\apache-tomcat-9.0.99
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Dcatalina.base=D:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Dcatalina.home=D:\apache-tomcat-9.0.99
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Dwtp.deploy=D:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Djava.library.path=D:\apache-tomcat-9.0.99\bin
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Dfile.encoding=UTF-8
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Dstdout.encoding=UTF-8
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -Dstderr.encoding=UTF-8
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.VersionLoggerListener log
+資訊: Command line argument: -XX:+ShowCodeDetailsInExceptionMessages
+3月 13, 2025 10:45:14 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+資訊: Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+3月 13, 2025 10:45:14 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+資訊: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+3月 13, 2025 10:45:14 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+資訊: APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+3月 13, 2025 10:45:14 上午 org.apache.catalina.core.AprLifecycleListener initializeSSL
+資訊: OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+3月 13, 2025 10:45:14 上午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["http-nio-8080"]
+3月 13, 2025 10:45:14 上午 org.apache.catalina.startup.Catalina load
+資訊: Server initialization in [350] milliseconds
+3月 13, 2025 10:45:14 上午 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service [Catalina]
+3月 13, 2025 10:45:14 上午 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet engine: [Apache Tomcat/9.0.99]
+3月 13, 2025 10:45:14 上午 org.apache.jasper.servlet.TldScanner scanJars
+資訊: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+3月 13, 2025 10:45:15 上午 org.apache.jasper.servlet.TldScanner scanJars
+資訊: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+3月 13, 2025 10:45:15 上午 org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer addServletWithApplication
+警告: Mapping conflict. A Servlet registration exists with same mapping as the Jersey servlet application, named com.sqlsdru.RestApplication, at the servlet mapping, /api/*.
+3月 13, 2025 10:45:15 上午 org.glassfish.jersey.server.wadl.WadlFeature configure
+警告: JAXBContext implementation could not be found. WADL feature is disabled.
+3月 13, 2025 10:45:15 上午 org.glassfish.jersey.server.wadl.WadlFeature configure
+警告: JAXBContext implementation could not be found. WADL feature is disabled.
+3月 13, 2025 10:45:15 上午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["http-nio-8080"]
+3月 13, 2025 10:45:15 上午 org.apache.catalina.startup.Catalina start
+資訊: Server startup in [1211] milliseconds
+java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1349)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1158)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at com.sqlsdru.RestfulResource.init(RestfulResource.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.glassfish.hk2.utilities.reflection.ReflectionHelper.invoke(ReflectionHelper.java:1268)
+	at org.jvnet.hk2.internal.ClazzCreator.postConstructMe(ClazzCreator.java:309)
+	at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:351)
+	at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:463)
+	at org.glassfish.jersey.inject.hk2.RequestContext.findOrCreate(RequestContext.java:59)
+	at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2102)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.internalGetService(ServiceLocatorImpl.java:758)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.internalGetService(ServiceLocatorImpl.java:721)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.getService(ServiceLocatorImpl.java:691)
+	at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.getInstance(AbstractHk2InjectionManager.java:161)
+	at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.getInstance(ImmediateHk2InjectionManager.java:30)
+	at org.glassfish.jersey.internal.inject.Injections.getOrCreate(Injections.java:122)
+	at org.glassfish.jersey.server.model.MethodHandler$ClassBasedMethodHandler.getInstance(MethodHandler.java:260)
+	at org.glassfish.jersey.server.internal.routing.PushMethodHandlerRouter.apply(PushMethodHandlerRouter.java:51)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:86)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:69)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:38)
+	at org.glassfish.jersey.process.internal.Stages.process(Stages.java:173)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:397)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:349)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:937)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1793)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+3月 13, 2025 10:45:23 上午 org.glassfish.jersey.internal.Errors logErrors
+警告: The following warnings have been detected: WARNING: Unknown HK2 failure detected:
+MultiException stack 1 of 2
+javax.ws.rs.WebApplicationException: Database connection failed: com.mysql.cj.jdbc.Driver
+	at com.sqlsdru.RestfulResource.init(RestfulResource.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.glassfish.hk2.utilities.reflection.ReflectionHelper.invoke(ReflectionHelper.java:1268)
+	at org.jvnet.hk2.internal.ClazzCreator.postConstructMe(ClazzCreator.java:309)
+	at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:351)
+	at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:463)
+	at org.glassfish.jersey.inject.hk2.RequestContext.findOrCreate(RequestContext.java:59)
+	at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2102)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.internalGetService(ServiceLocatorImpl.java:758)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.internalGetService(ServiceLocatorImpl.java:721)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.getService(ServiceLocatorImpl.java:691)
+	at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.getInstance(AbstractHk2InjectionManager.java:161)
+	at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.getInstance(ImmediateHk2InjectionManager.java:30)
+	at org.glassfish.jersey.internal.inject.Injections.getOrCreate(Injections.java:122)
+	at org.glassfish.jersey.server.model.MethodHandler$ClassBasedMethodHandler.getInstance(MethodHandler.java:260)
+	at org.glassfish.jersey.server.internal.routing.PushMethodHandlerRouter.apply(PushMethodHandlerRouter.java:51)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:86)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:69)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:38)
+	at org.glassfish.jersey.process.internal.Stages.process(Stages.java:173)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:397)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:349)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:937)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1793)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+MultiException stack 2 of 2
+java.lang.IllegalStateException: Unable to perform operation: post construct on com.sqlsdru.RestfulResource
+	at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:369)
+	at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:463)
+	at org.glassfish.jersey.inject.hk2.RequestContext.findOrCreate(RequestContext.java:59)
+	at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2102)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.internalGetService(ServiceLocatorImpl.java:758)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.internalGetService(ServiceLocatorImpl.java:721)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.getService(ServiceLocatorImpl.java:691)
+	at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.getInstance(AbstractHk2InjectionManager.java:161)
+	at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.getInstance(ImmediateHk2InjectionManager.java:30)
+	at org.glassfish.jersey.internal.inject.Injections.getOrCreate(Injections.java:122)
+	at org.glassfish.jersey.server.model.MethodHandler$ClassBasedMethodHandler.getInstance(MethodHandler.java:260)
+	at org.glassfish.jersey.server.internal.routing.PushMethodHandlerRouter.apply(PushMethodHandlerRouter.java:51)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:86)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:69)
+	at org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:38)
+	at org.glassfish.jersey.process.internal.Stages.process(Stages.java:173)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:397)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:349)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:379)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:937)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1793)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
